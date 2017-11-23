@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<script>
+		function logActiveElement(e) {
+			console.log(document.activeElement);
+		}
+	</script>
+</head>
+
+<body>
+	<div id="button" onclick="logActiveElement();" role="button" tabindex="0">button 1</div>
+	<div id="button2" onclick="logActiveElement();" role="button" tabindex="0">button 2</div>
+</body>
+
+</html>
