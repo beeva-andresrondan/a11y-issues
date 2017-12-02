@@ -27,7 +27,12 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<script>
 		function logActiveElement(e) {
-			document.getElementById("content").innerHTML = document.activeElement.innerHTML;
+			if(document.activeElement.className.indexOf('button')===-1) {
+				document.getElementById("content").innerHTML = 'The element focused is not a button!'
+			} else {
+				document.getElementById("content").innerHTML = document.activeElement.innerHTML;
+			}
+
 		}
 	</script>
 </head>
@@ -36,7 +41,7 @@
 	<div class="button" id="button" onclick="logActiveElement();" role="button" tabindex="0">button 1</div>
 	<div class="button" id="button2" onclick="logActiveElement();" role="button" tabindex="0">button 2</div>
 
-	Selected button <span id="content"></span>
+	Focused element after click: <span id="content"></span>
 </body>
 
 </html>
